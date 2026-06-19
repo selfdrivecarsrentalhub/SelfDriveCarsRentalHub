@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+═══════════════════════════════════════════════════════════════════════════
+  Self Drive Cars Rental Hub — Gachibowli, Hyderabad
+───────────────────────────────────────────────────────────────────────────
+  TO UPDATE YOUR DETAILS LATER:
+  1. Replace every "+91 XXXXX XXXXX" with your real mobile number.
+  2. Replace every "wa.me/91XXXXXXXXXX" with your WhatsApp link
+     (format: wa.me/91 followed by your 10-digit number, no spaces).
+  3. Use Ctrl+H (Find & Replace) in any text editor — quick and safe.
+═══════════════════════════════════════════════════════════════════════════
+-->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Self Drive Cars Rental Hub in Gachibowli, Hyderabad. Premium self-drive car rentals — no driver, no hassle. Hourly, daily and weekly packages." />
+<meta name="keywords" content="self drive cars Gachibowli, car rental Hyderabad, self drive Hyderabad, rent a car Gachibowli, Baleno self drive, weekend car rental Hyderabad" />
+<meta name="author" content="Self Drive Cars Rental Hub" />
+<meta name="geo.region" content="IN-TG" />
+<meta name="geo.placename" content="Gachibowli, Hyderabad" />
+<meta name="geo.position" content="17.44602270932871;78.36130024945885" />
+<meta name="ICBM" content="17.44602270932871, 78.36130024945885" />
+
+<!-- Open Graph for sharing on WhatsApp/Facebook -->
+<meta property="og:title" content="Self Drive Cars Rental Hub — Gachibowli, Hyderabad" />
+<meta property="og:description" content="Rent a self-drive car in Gachibowli. Clean cars. Honest rates. Book by phone or WhatsApp." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="images/car-front-side.jpeg" />
+
+<title>Self Drive Cars Rental Hub · Gachibowli, Hyderabad</title>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Schema.org Local Business -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRental",
+  "name": "Self Drive Cars Rental Hub",
+  "description": "Self-drive car rental service in Gachibowli, Hyderabad.",
+  "image": "images/car-front-side.jpeg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Gachibowli",
+    "addressLocality": "Hyderabad",
+    "addressRegion": "Telangana",
+    "postalCode": "500032",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 17.44602270932871,
+    "longitude": 78.36130024945885
+  },
+  "telephone": "+91 XXXXX XXXXX",
+  "openingHours": "Mo-Su 00:00-23:59",
+  "priceRange": "₹₹"
+}
+</script>
+
+<style>
+  /* ────────────────────────────────────────────────────────────
+     DESIGN TOKENS
+     ────────────────────────────────────────────────────────────
+     Palette is built around the dark-navy Baleno against warm
+     Hyderabad-dust backgrounds in the photographs — paired with
+     a deliberate sunset-orange accent used sparingly for CTAs.
+  ───────────────────────────────────────────────────────────── */
+  :root {
+    --bg: #FAF7F1;          /* warm off-white */
+    --bg-alt: #F1EBDF;      /* dust beige */
+    --ink: #0F1922;         /* near-black navy, matches car */
+    --ink-soft: #3A4654;
+    --muted: #8B8478;       /* warm grey for meta text */
+    --line: #E4DCC9;        /* dust hairline */
+    --surface: #FFFFFF;
+    --accent: #E55B2B;      /* sunset orange — used with restraint */
+    --accent-deep: #BC4520;
+    --whatsapp: #25D366;
+    --shadow-soft: 0 1px 3px rgba(15,25,34,0.04), 0 8px 24px rgba(15,25,34,0.06);
+    --shadow-strong: 0 4px 12px rgba(15,25,34,0.08), 0 24px 48px rgba(15,25,34,0.12);
+
+    --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+    --font-body: "Inter", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+    --maxw: 1240px;
+    --gutter: clamp(1.25rem, 4vw, 3rem);
+    --radius: 14px;
+    --radius-lg: 22px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.55;
+    color: var(--ink);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+
+  /* ────────── TOP UTILITY BAR (HEADER: contact #1) ────────── */
+  .topbar {
+    background: var(--ink);
+    color: var(--bg);
+    font-size: 13px;
+    padding: 9px 0;
+  }
+  .topbar-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 28px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .topbar a:hover { color: var(--accent); }
+  .topbar-group { display: flex; gap: 28px; flex-wrap: wrap; align-items: center; }
+  .topbar svg { width: 14px; height: 14px; vertical-align: -2px; margin-right: 6px; opacity: .85; }
+  .topbar .live-dot {
+    display: inline-block;
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: #58D68D;
+    margin-right: 7px;
+    box-shadow: 0 0 0 0 rgba(88,214,141,.7);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(88,214,141,.7); }
+    70%  { box-shadow: 0 0 0 8px rgba(88,214,141,0); }
+    100% { box-shadow: 0 0 0 0 rgba(88,214,141,0); }
+  }
+
+  /* ────────── MAIN NAV ────────── */
+  .nav {
+    position: sticky;
+    top: 0;
+    background: rgba(250,247,241,0.92);
+    backdrop-filter: saturate(180%) blur(10px);
+    -webkit-backdrop-filter: saturate(180%) blur(10px);
+    border-bottom: 1px solid var(--line);
+    z-index: 100;
+  }
+  .nav-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 16px var(--gutter);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: -0.01em;
+  }
+  .brand-mark {
+    width: 38px; height: 38px;
+    border-radius: 10px;
+    background: var(--ink);
+    color: var(--bg);
+    display: grid;
+    place-items: center;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: -0.04em;
+    position: relative;
+    overflow: hidden;
+  }
+  .brand-mark::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 3px;
+    background: var(--accent);
+  }
+  .brand-text { display: flex; flex-direction: column; line-height: 1.05; }
+  .brand-text small {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .nav-links a {
+    color: var(--ink-soft);
+    transition: color .2s;
+  }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background: var(--ink);
+    color: var(--bg);
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background .2s, transform .15s;
+  }
+  .nav-cta:hover { background: var(--accent); transform: translateY(-1px); }
+  .nav-cta svg { width: 14px; height: 14px; }
+
+  .menu-toggle { display: none; }
+
+  @media (max-width: 880px) {
+    .nav-links { display: none; }
+    .menu-toggle {
+      display: grid; place-items: center;
+      width: 38px; height: 38px;
+      border-radius: 10px;
+      background: var(--bg-alt);
+    }
+    .menu-toggle svg { width: 20px; height: 20px; }
+    .nav-cta span { display: none; }
+    .nav-cta { padding: 10px; }
+  }
+
+  /* ────────── HERO ────────── */
+  .hero {
+    padding: clamp(48px, 7vw, 96px) 0 clamp(40px, 6vw, 72px);
+    overflow: hidden;
+  }
+  .hero-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: clamp(32px, 5vw, 64px);
+    align-items: center;
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 28px; height: 1px;
+    background: var(--accent);
+  }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(2.4rem, 6vw, 4.4rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin: 0 0 22px;
+    color: var(--ink);
+  }
+  .hero h1 em {
+    font-style: normal;
+    font-weight: 500;
+    color: var(--accent);
+    position: relative;
+    display: inline-block;
+  }
+  .hero h1 em::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 4px;
+    height: 6px;
+    background: rgba(229,91,43,0.15);
+    z-index: -1;
+  }
+  .hero p.lede {
+    font-size: clamp(1rem, 1.4vw, 1.15rem);
+    color: var(--ink-soft);
+    max-width: 38ch;
+    margin: 0 0 32px;
+  }
+  .hero-ctas {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 22px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: transform .15s, box-shadow .2s, background .2s;
+  }
+  .btn svg { width: 16px; height: 16px; }
+  .btn-primary {
+    background: var(--ink);
+    color: var(--bg);
+  }
+  .btn-primary:hover { background: var(--accent); transform: translateY(-2px); box-shadow: var(--shadow-strong); }
+  .btn-whatsapp {
+    background: var(--whatsapp);
+    color: white;
+  }
+  .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: var(--shadow-strong); }
+  .btn-ghost {
+    border: 1.5px solid var(--ink);
+    color: var(--ink);
+  }
+  .btn-ghost:hover { background: var(--ink); color: var(--bg); }
+
+  .hero-meta {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+  }
+  .hero-meta-item { display: flex; flex-direction: column; }
+  .hero-meta-item strong {
+    font-family: var(--font-display);
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+  .hero-meta-item span {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 6px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  /* hero image stack */
+  .hero-visual {
+    position: relative;
+    aspect-ratio: 4/5;
+  }
+  .hero-visual img {
+    position: absolute;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-strong);
+    object-fit: cover;
+    transition: transform .4s ease;
+  }
+  .hero-img-main {
+    inset: 0 0 0 12%;
+    height: 100%;
+    width: 88%;
+  }
+  .hero-img-acc {
+    bottom: -3%;
+    left: -4%;
+    width: 44%;
+    aspect-ratio: 4/5;
+    border: 6px solid var(--bg);
+  }
+  .hero-tag {
+    position: absolute;
+    top: 24px;
+    right: -8px;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 10px 18px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--ink);
+    box-shadow: var(--shadow-soft);
+    transform: rotate(2deg);
+    z-index: 2;
+  }
+  .hero-tag span { color: var(--accent); font-weight: 700; }
+
+  @media (max-width: 880px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-visual { max-width: 480px; margin: 0 auto; }
+  }
+
+  /* ────────── MARQUEE STRIP ────────── */
+  .marquee {
+    background: var(--ink);
+    color: var(--bg);
+    padding: 18px 0;
+    overflow: hidden;
+    border-top: 1px solid var(--ink);
+  }
+  .marquee-track {
+    display: flex;
+    gap: 56px;
+    animation: scroll 32s linear infinite;
+    white-space: nowrap;
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+  .marquee-track span { display: inline-flex; align-items: center; gap: 56px; }
+  .marquee-track .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); display: inline-block; }
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  /* ────────── SECTION BASE ────────── */
+  section { padding: clamp(64px, 9vw, 120px) 0; }
+  .container {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+  }
+  .section-head {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 48px;
+    margin-bottom: 56px;
+    align-items: end;
+  }
+  .section-head h2 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    margin: 16px 0 0;
+    color: var(--ink);
+  }
+  .section-head p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 1.05rem;
+    max-width: 50ch;
+  }
+  @media (max-width: 720px) {
+    .section-head { grid-template-columns: 1fr; gap: 18px; }
+  }
+
+  /* ────────── ABOUT + CONTACT CARD (middle contact #1) ────────── */
+  .about {
+    background: var(--bg-alt);
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: clamp(32px, 5vw, 64px);
+    align-items: start;
+  }
+  .about-body p {
+    font-size: 1.1rem;
+    color: var(--ink-soft);
+    margin: 0 0 18px;
+  }
+  .about-body p:first-of-type {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 2.5vw, 1.9rem);
+    font-weight: 500;
+    line-height: 1.25;
+    color: var(--ink);
+    letter-spacing: -0.015em;
+  }
+  .contact-card {
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    padding: 36px 32px;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--line);
+  }
+  .contact-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0 0 6px;
+    letter-spacing: -0.02em;
+  }
+  .contact-card .sub {
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  .contact-row {
+    display: flex;
+    gap: 14px;
+    padding: 16px 0;
+    border-top: 1px solid var(--line);
+    align-items: flex-start;
+  }
+  .contact-row:first-of-type { border-top: none; padding-top: 0; }
+  .contact-row .icon {
+    width: 36px; height: 36px;
+    border-radius: 10px;
+    background: var(--bg-alt);
+    display: grid; place-items: center;
+    flex-shrink: 0;
+  }
+  .contact-row .icon svg { width: 16px; height: 16px; color: var(--accent); }
+  .contact-row .label {
+    font-size: 11px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  .contact-row .value {
+    font-weight: 600;
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.4;
+  }
+  .contact-row a.value:hover { color: var(--accent); }
+  .contact-card-cta {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .contact-card-cta .btn { padding: 12px; justify-content: center; font-size: 14px; }
+
+  @media (max-width: 880px) {
+    .about-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ────────── FEATURED CAR GALLERY ────────── */
+  .featured-gallery {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 16px;
+    aspect-ratio: 16/10;
+    max-width: 100%;
+  }
+  .featured-gallery .g {
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--bg-alt);
+    position: relative;
+  }
+  .featured-gallery .g img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform .6s ease;
+  }
+  .featured-gallery .g:hover img { transform: scale(1.04); }
+  .featured-gallery .g1 { grid-row: 1 / 3; }
+  .featured-gallery .g2 { grid-column: 2; grid-row: 1; }
+  .featured-gallery .g3 { grid-column: 3; grid-row: 1; }
+  .featured-gallery .g4 { grid-column: 2; grid-row: 2; }
+  .featured-gallery .g5 { grid-column: 3; grid-row: 2; }
+
+  .featured-meta {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 32px;
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+    align-items: start;
+  }
+  .featured-meta h3 {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0 0 6px;
+    letter-spacing: -0.02em;
+  }
+  .featured-meta .featured-tag {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+  }
+  .spec .spec-val {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+  }
+  .spec .spec-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    margin-top: 4px;
+  }
+
+  @media (max-width: 720px) {
+    .featured-gallery {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      aspect-ratio: auto;
+    }
+    .featured-gallery .g1 { grid-row: 1; grid-column: 1 / 3; aspect-ratio: 16/10; }
+    .featured-gallery .g2 { grid-row: 2; grid-column: 1; aspect-ratio: 1; }
+    .featured-gallery .g3 { grid-row: 2; grid-column: 2; aspect-ratio: 1; }
+    .featured-gallery .g4 { grid-row: 3; grid-column: 1; aspect-ratio: 1; }
+    .featured-gallery .g5 { grid-row: 3; grid-column: 2; aspect-ratio: 1; }
+    .featured-meta { grid-template-columns: 1fr 1fr; gap: 20px; }
+  }
+
+  /* ────────── FLEET CATEGORIES ────────── */
+  .fleet {
+    background: var(--bg-alt);
+  }
+  .fleet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+  }
+  .fleet-card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 28px;
+    border: 1px solid var(--line);
+    transition: transform .2s, box-shadow .2s;
+    display: flex;
+    flex-direction: column;
+    min-height: 220px;
+  }
+  .fleet-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-soft); }
+  .fleet-icon {
+    width: 44px; height: 44px;
+    background: var(--ink);
+    border-radius: 10px;
+    display: grid; place-items: center;
+    margin-bottom: 18px;
+  }
+  .fleet-icon svg { width: 22px; height: 22px; color: var(--bg); }
+  .fleet-card h4 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 4px;
+    letter-spacing: -0.02em;
+  }
+  .fleet-card .examples {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 18px;
+  }
+  .fleet-card .price {
+    margin-top: auto;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: var(--ink-soft);
+  }
+  .fleet-card .price strong {
+    color: var(--accent);
+    font-size: 16px;
+  }
+  .fleet-card .badge {
+    align-self: flex-start;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 4px 10px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+  }
+  .badge-available { background: rgba(88,214,141,.15); color: #1f8a4d; }
+  .badge-request   { background: var(--bg-alt); color: var(--ink-soft); }
+
+  /* ────────── HOW IT WORKS ────────── */
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 32px;
+  }
+  .step { position: relative; }
+  .step .num {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+  .step h4 {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 14px 0 8px;
+    letter-spacing: -0.015em;
+  }
+  .step p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 15px;
+  }
+
+  /* ────────── WHY US ────────── */
+  .why {
+    background: var(--ink);
+    color: var(--bg);
+  }
+  .why .section-head h2 { color: var(--bg); }
+  .why .section-head p { color: rgba(250,247,241,0.7); }
+  .why .eyebrow { color: rgba(250,247,241,0.6); }
+  .why .eyebrow::before { background: var(--accent); }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1px;
+    background: rgba(250,247,241,0.1);
+    border: 1px solid rgba(250,247,241,0.1);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .why-item {
+    background: var(--ink);
+    padding: 32px 28px;
+  }
+  .why-item svg { width: 24px; height: 24px; color: var(--accent); margin-bottom: 16px; }
+  .why-item h4 {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 8px;
+    color: var(--bg);
+    letter-spacing: -0.015em;
+  }
+  .why-item p {
+    margin: 0;
+    color: rgba(250,247,241,0.65);
+    font-size: 14px;
+  }
+
+  /* ────────── PRICING ────────── */
+  .price-table {
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--line);
+  }
+  .price-row {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1fr;
+    padding: 22px 28px;
+    border-top: 1px solid var(--line);
+    align-items: center;
+  }
+  .price-row:first-child { border-top: none; background: var(--bg-alt); font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-soft); padding: 16px 28px; }
+  .price-row .pkg {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.05rem;
+    letter-spacing: -0.01em;
+  }
+  .price-row .amt {
+    font-family: var(--font-mono);
+    font-size: 16px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .price-row .amt strong { color: var(--accent); font-size: 18px; font-weight: 600; }
+  .price-row .km { font-size: 13px; color: var(--muted); }
+  .price-fineprint {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 18px;
+    text-align: center;
+  }
+
+  @media (max-width: 720px) {
+    .price-row { grid-template-columns: 1fr 1fr; gap: 8px; padding: 16px; }
+    .price-row:first-child { display: none; }
+    .price-row .pkg { grid-column: 1 / 3; font-size: 1.15rem; }
+    .price-row .km { font-size: 12px; }
+  }
+
+  /* ────────── CONTACT + MAP (middle contact #2) ────────── */
+  .contact-map {
+    background: var(--bg-alt);
+  }
+  .map-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: clamp(24px, 4vw, 48px);
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--line);
+  }
+  .map-info {
+    padding: clamp(28px, 4vw, 48px);
+  }
+  .map-info h3 {
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    margin: 12px 0 16px;
+    line-height: 1.05;
+  }
+  .map-info p {
+    color: var(--ink-soft);
+    margin: 0 0 28px;
+  }
+  .map-info .contact-row { padding: 14px 0; }
+  .map-frame {
+    position: relative;
+    min-height: 460px;
+  }
+  .map-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  @media (max-width: 880px) {
+    .map-grid { grid-template-columns: 1fr; }
+    .map-frame { min-height: 320px; }
+  }
+
+  /* ────────── FAQ ────────── */
+  .faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .faq-item {
+    border-top: 1px solid var(--line);
+  }
+  .faq-item:last-child { border-bottom: 1px solid var(--line); }
+  .faq-q {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+    padding: 24px 0;
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    transition: color .2s;
+  }
+  .faq-q:hover { color: var(--accent); }
+  .faq-q .plus {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: var(--bg-alt);
+    display: grid; place-items: center;
+    transition: transform .3s, background .2s;
+    flex-shrink: 0;
+    margin-left: 24px;
+  }
+  .faq-q .plus svg { width: 12px; height: 12px; }
+  .faq-item.open .plus { transform: rotate(45deg); background: var(--accent); color: var(--bg); }
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .35s ease;
+    color: var(--ink-soft);
+  }
+  .faq-a-inner { padding: 0 0 24px; }
+  .faq-item.open .faq-a { max-height: 300px; }
+
+  /* ────────── CTA BANNER ────────── */
+  .cta-banner {
+    background: var(--accent);
+    color: var(--bg);
+    text-align: center;
+    padding: clamp(56px, 8vw, 88px) 0;
+  }
+  .cta-banner h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    font-weight: 700;
+    margin: 0 0 16px;
+    letter-spacing: -0.03em;
+    line-height: 1;
+  }
+  .cta-banner p {
+    color: rgba(250,247,241,0.85);
+    font-size: 1.1rem;
+    margin: 0 0 32px;
+  }
+  .cta-banner .btn-primary { background: var(--ink); }
+  .cta-banner .btn-primary:hover { background: var(--bg); color: var(--ink); }
+  .cta-banner .btn-whatsapp { background: var(--bg); color: var(--ink); }
+  .cta-banner-ctas {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* ────────── FOOTER (contact #3) ────────── */
+  footer {
+    background: var(--ink);
+    color: rgba(250,247,241,0.7);
+    padding: 80px 0 0;
+  }
+  .footer-grid {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1fr;
+    gap: 48px;
+    padding-bottom: 56px;
+  }
+  .footer-brand .brand-mark { background: var(--bg); color: var(--ink); }
+  .footer-brand .brand-mark::after { background: var(--accent); }
+  .footer-brand .brand-text small { color: rgba(250,247,241,0.5); }
+  .footer-brand p {
+    margin: 20px 0 24px;
+    font-size: 14px;
+    max-width: 32ch;
+    color: rgba(250,247,241,0.6);
+  }
+  .footer-brand .brand { color: var(--bg); }
+  footer h5 {
+    font-family: var(--font-display);
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--bg);
+    margin: 0 0 20px;
+  }
+  footer ul { list-style: none; padding: 0; margin: 0; }
+  footer li { margin-bottom: 10px; font-size: 14px; }
+  footer li a:hover { color: var(--accent); }
+  footer .contact-line {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+  footer .contact-line svg { width: 14px; height: 14px; margin-top: 4px; color: var(--accent); flex-shrink: 0; }
+  footer .contact-line strong { color: var(--bg); display: block; font-weight: 500; }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(250,247,241,0.1);
+    padding: 24px var(--gutter);
+    max-width: var(--maxw);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+    color: rgba(250,247,241,0.5);
+  }
+  .footer-bottom a:hover { color: var(--accent); }
+
+  @media (max-width: 720px) {
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+    .footer-brand { grid-column: 1 / 3; }
+  }
+
+  /* ────────── FLOATING WHATSAPP ────────── */
+  .float-wa {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    width: 56px; height: 56px;
+    background: var(--whatsapp);
+    border-radius: 50%;
+    display: grid; place-items: center;
+    box-shadow: 0 8px 24px rgba(37,211,102,0.4);
+    z-index: 90;
+    transition: transform .2s;
+  }
+  .float-wa:hover { transform: scale(1.08); }
+  .float-wa svg { width: 28px; height: 28px; color: white; }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* Reveal on scroll */
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity .6s, transform .6s; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ TOP UTILITY BAR — Contact info #1 (HEADER) ═══════════════ -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-group">
+      <span><span class="live-dot"></span>Open now · 24×7 pickup</span>
+      <a href="tel:+91XXXXXXXXXX">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +91 XXXXX XXXXX
+      </a>
+    </div>
+    <div class="topbar-group">
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Gachibowli, Hyderabad
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ MAIN NAV ═══════════════ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="brand">
+      <div class="brand-mark">SD</div>
+      <div class="brand-text">
+        Self Drive Cars
+        <small>Rental Hub · Gachibowli</small>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#fleet">Fleet</a>
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#location">Find us</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a href="tel:+91XXXXXXXXXX" class="nav-cta">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>Call to book</span>
+    </a>
+  </div>
+</nav>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="eyebrow">Self-drive rentals · Gachibowli</div>
+      <h1>Your <em>weekend</em>,<br>your wheels,<br>your way.</h1>
+      <p class="lede">Clean cars, honest rates, and zero driver-hassle. Pick up in Gachibowli and drive anywhere the road takes you — by the hour, day, or week.</p>
+      <div class="hero-ctas">
+        <a href="tel:+91XXXXXXXXXX" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call +91 XXXXX XXXXX
+        </a>
+        <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener" class="btn btn-whatsapp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          WhatsApp us
+        </a>
+      </div>
+      <div class="hero-meta">
+        <div class="hero-meta-item"><strong>24/7</strong><span>Pickup & drop</span></div>
+        <div class="hero-meta-item"><strong>₹1,499</strong><span>Starting/day</span></div>
+        <div class="hero-meta-item"><strong>0</strong><span>Driver hassle</span></div>
+        <div class="hero-meta-item"><strong>1km</strong><span>From Metro</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-tag">Featured · <span>Maruti Baleno</span></div>
+      <img src="images/car-front-side.jpeg" alt="Maruti Suzuki Baleno parked at Self Drive Cars Rental Hub Gachibowli" class="hero-img-main" />
+      <img src="images/car-rear.jpeg" alt="Rear three-quarter view of Maruti Baleno" class="hero-img-acc" />
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ MARQUEE STRIP ═══════════════ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Unlimited kms<span class="dot"></span>Aadhaar &amp; DL accepted<span class="dot"></span>Fuel-flexible<span class="dot"></span>Doorstep delivery in Gachibowli<span class="dot"></span>No deposit hassle<span class="dot"></span>Weekly &amp; monthly plans<span class="dot"></span></span>
+    <span>Unlimited kms<span class="dot"></span>Aadhaar &amp; DL accepted<span class="dot"></span>Fuel-flexible<span class="dot"></span>Doorstep delivery in Gachibowli<span class="dot"></span>No deposit hassle<span class="dot"></span>Weekly &amp; monthly plans<span class="dot"></span></span>
+  </div>
+</div>
+
+<!-- ═══════════════ ABOUT + CONTACT CARD — Contact info #2 (MIDDLE) ═══════════════ -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-body">
+        <div class="eyebrow">About the hub</div>
+        <p>We started Self Drive Cars Rental Hub for the kind of trip you don't want a stranger sitting next to you on — a long drive to Pondicherry, a weekend at Bheemeshwari, the cousin's wedding in Vijayawada.</p>
+        <p>Our small fleet is parked in Gachibowli — the IT corridor end — so pickup is a five-minute affair on the way out of the city. Cars are sanitised between rentals, papers are sorted, and the keys are handed over with a tank that's exactly as full as you'd want.</p>
+        <p>No surge pricing. No driver shifts to coordinate. You drive, we'll be here when you get back.</p>
+      </div>
+      <aside class="contact-card">
+        <h3>Reach the hub</h3>
+        <div class="sub">Direct line · WhatsApp · Walk-in</div>
+        <div class="contact-row">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div>
+            <div class="label">Phone</div>
+            <a href="tel:+91XXXXXXXXXX" class="value">+91 XXXXX XXXXX</a>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487 1.715.741 2.379.804 3.236.679.522-.077 1.605-.656 1.83-1.288.227-.633.227-1.175.16-1.288-.067-.115-.247-.182-.518-.297M12 22a9.962 9.962 0 0 1-5.001-1.339L2 22l1.339-4.999A9.962 9.962 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg></div>
+          <div>
+            <div class="label">WhatsApp</div>
+            <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener" class="value">Chat with us now</a>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div>
+            <div class="label">Address</div>
+            <div class="value">Gachibowli,<br>Hyderabad, Telangana 500032</div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div>
+            <div class="label">Hours</div>
+            <div class="value">24×7 — call before late-night pickup</div>
+          </div>
+        </div>
+        <div class="contact-card-cta">
+          <a href="tel:+91XXXXXXXXXX" class="btn btn-primary">Call</a>
+          <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener" class="btn btn-whatsapp">WhatsApp</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FEATURED CAR GALLERY ═══════════════ -->
+<section id="fleet">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">This month's featured car</div>
+        <h2>Maruti Suzuki Baleno.</h2>
+      </div>
+      <p>The car people actually want to drive — light steering, easy parking, comfortable on highways. We keep ours dressed in midnight blue and freshly detailed.</p>
+    </div>
+
+    <div class="featured-gallery">
+      <div class="g g1"><img src="images/car-front-side.jpeg" alt="Maruti Baleno three-quarter front view" /></div>
+      <div class="g g2"><img src="images/car-front-1.jpeg" alt="Maruti Baleno head-on front view" /></div>
+      <div class="g g3"><img src="images/car-side-angle.jpeg" alt="Maruti Baleno side angle" /></div>
+      <div class="g g4"><img src="images/car-rear.jpeg" alt="Maruti Baleno rear three-quarter" /></div>
+      <div class="g g5"><img src="images/car-front-2.jpeg" alt="Maruti Baleno front close-up" /></div>
+    </div>
+
+    <div class="featured-meta">
+      <div>
+        <div class="featured-tag">Hatchback · Petrol · Manual</div>
+        <h3>Baleno Delta</h3>
+        <p style="margin:0;color:var(--ink-soft);font-size:14px;">Cruise-friendly, fuel-efficient, and the right size for city &amp; highway. Seats 5 comfortably with room for two large suitcases.</p>
+      </div>
+      <div class="spec"><div class="spec-val">5</div><div class="spec-label">Seats</div></div>
+      <div class="spec"><div class="spec-val">22 km/l</div><div class="spec-label">Mileage</div></div>
+      <div class="spec"><div class="spec-val">318 L</div><div class="spec-label">Boot</div></div>
+      <div class="spec"><div class="spec-val">₹1,499</div><div class="spec-label">From/day</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FLEET CATEGORIES ═══════════════ -->
+<section class="fleet">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">The fleet</div>
+        <h2>Pick the car that fits the trip.</h2>
+      </div>
+      <p>Hatchbacks for the city run, sedans for the airport, SUVs for that road trip you've been planning since January. Call to confirm availability of any model.</p>
+    </div>
+    <div class="fleet-grid">
+      <div class="fleet-card">
+        <div class="fleet-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 13l1.5-4.5A2 2 0 0 1 6.4 7h11.2a2 2 0 0 1 1.9 1.5L21 13"/><path d="M3 13h18v5H3z"/><circle cx="7" cy="18" r="1.5"/><circle cx="17" cy="18" r="1.5"/></svg></div>
+        <span class="badge badge-available">Available now</span>
+        <h4>Hatchback</h4>
+        <div class="examples">Baleno · Swift · i20</div>
+        <div class="price">From <strong>₹1,499</strong>/day</div>
+      </div>
+      <div class="fleet-card">
+        <div class="fleet-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 13l2-5h14l2 5"/><path d="M3 13h18v5H3z"/><circle cx="7" cy="18" r="1.5"/><circle cx="17" cy="18" r="1.5"/></svg></div>
+        <span class="badge badge-request">On request</span>
+        <h4>Sedan</h4>
+        <div class="examples">Honda City · Hyundai Verna · Dzire</div>
+        <div class="price">From <strong>₹1,999</strong>/day</div>
+      </div>
+      <div class="fleet-card">
+        <div class="fleet-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="9" width="18" height="9" rx="1"/><circle cx="7" cy="18" r="1.5"/><circle cx="17" cy="18" r="1.5"/><path d="M3 13h18"/></svg></div>
+        <span class="badge badge-request">On request</span>
+        <h4>Compact SUV</h4>
+        <div class="examples">Sonet · Brezza · Venue</div>
+        <div class="price">From <strong>₹2,499</strong>/day</div>
+      </div>
+      <div class="fleet-card">
+        <div class="fleet-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="8" width="20" height="11" rx="1"/><circle cx="6.5" cy="19" r="1.5"/><circle cx="17.5" cy="19" r="1.5"/><path d="M5 8V5h14v3"/></svg></div>
+        <span class="badge badge-request">On request</span>
+        <h4>7-seater</h4>
+        <div class="examples">Innova · Ertiga · XL6</div>
+        <div class="price">From <strong>₹3,499</strong>/day</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ HOW IT WORKS ═══════════════ -->
+<section id="how">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">How it works</div>
+        <h2>Four steps. No paperwork drama.</h2>
+      </div>
+      <p>The process is shorter than this paragraph. Call or WhatsApp with your dates, swing by Gachibowli to pick up, drive, drop back.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">01</div>
+        <h4>Call or WhatsApp</h4>
+        <p>Tell us the car, the dates, the rough route. We'll lock it in within minutes.</p>
+      </div>
+      <div class="step">
+        <div class="num">02</div>
+        <h4>Verify &amp; pay</h4>
+        <p>Aadhaar + Driving Licence over WhatsApp. Pay the package + a refundable deposit.</p>
+      </div>
+      <div class="step">
+        <div class="num">03</div>
+        <h4>Pick up</h4>
+        <p>Walk in to the Gachibowli hub. 10-minute handover with quick condition check.</p>
+      </div>
+      <div class="step">
+        <div class="num">04</div>
+        <h4>Drive &amp; return</h4>
+        <p>Drive however far you like. Return on time, get your deposit back same day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ WHY US ═══════════════ -->
+<section class="why">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">What's different</div>
+        <h2>The small things,<br>done properly.</h2>
+      </div>
+      <p>A lot of self-drive rentals in Hyderabad treat the car like a taxi. We don't. Here's the difference.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        <h4>Sanitised between rentals</h4>
+        <p>Full interior wipe-down before every handover. The car smells like a car, not a stranger.</p>
+      </div>
+      <div class="why-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="6" x2="12" y2="12"/><line x1="12" y1="12" x2="16" y2="14"/></svg>
+        <h4>No hidden hours</h4>
+        <p>A "day" is 24 hours from pickup. None of that "midnight reset" nonsense other places pull.</p>
+      </div>
+      <div class="why-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        <h4>WhatsApp-first</h4>
+        <p>We pick up calls. We respond to WhatsApp. You won't be stuck on hold.</p>
+      </div>
+      <div class="why-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <h4>Comprehensive insurance</h4>
+        <p>Every car covered for third-party + own damage. Small dings happen — we won't argue.</p>
+      </div>
+      <div class="why-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        <h4>Transparent rates</h4>
+        <p>Daily price includes everything except fuel. No surprise charges at return.</p>
+      </div>
+      <div class="why-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <h4>Quick pickup</h4>
+        <p>Ten minutes from "I'm here" to "I'm driving." We won't waste your weekend.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PRICING ═══════════════ -->
+<section id="pricing">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Pricing</div>
+        <h2>Honest, flat rates.</h2>
+      </div>
+      <p>Starting prices for our Baleno. Sedans and SUVs run a bit higher — call for an exact quote.</p>
+    </div>
+    <div class="price-table">
+      <div class="price-row">
+        <div>Package</div>
+        <div>Rate</div>
+        <div>Includes</div>
+        <div>Best for</div>
+      </div>
+      <div class="price-row">
+        <div class="pkg">12-hour day</div>
+        <div class="amt"><strong>₹999</strong></div>
+        <div class="km">120 km</div>
+        <div class="km">Day trips</div>
+      </div>
+      <div class="price-row">
+        <div class="pkg">24-hour day</div>
+        <div class="amt"><strong>₹1,499</strong></div>
+        <div class="km">200 km</div>
+        <div class="km">Overnight trips</div>
+      </div>
+      <div class="price-row">
+        <div class="pkg">Weekend (Fri–Sun)</div>
+        <div class="amt"><strong>₹3,999</strong></div>
+        <div class="km">600 km</div>
+        <div class="km">Goa, Pondi, hills</div>
+      </div>
+      <div class="price-row">
+        <div class="pkg">Weekly</div>
+        <div class="amt"><strong>₹8,999</strong></div>
+        <div class="km">1,200 km</div>
+        <div class="km">Long road trips</div>
+      </div>
+      <div class="price-row">
+        <div class="pkg">Monthly</div>
+        <div class="amt"><strong>₹28,999</strong></div>
+        <div class="km">3,500 km</div>
+        <div class="km">Visiting Hyderabad</div>
+      </div>
+    </div>
+    <p class="price-fineprint">Fuel not included. Extra km charged at ₹8/km. Refundable deposit of ₹3,000 collected at pickup.</p>
+  </div>
+</section>
+
+<!-- ═══════════════ MAP + CONTACT — Contact info #3 (MIDDLE) ═══════════════ -->
+<section class="contact-map" id="location">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Find the hub</div>
+        <h2>Walk in. Drive out.</h2>
+      </div>
+      <p>We're parked in the heart of Gachibowli — easy access from ORR, Mehdipatnam, and the Madhapur side.</p>
+    </div>
+    <div class="map-grid">
+      <div class="map-info">
+        <div class="eyebrow">Location</div>
+        <h3>Self Drive Cars Rental Hub</h3>
+        <p>Drop a pin. Walk in. The whole pickup takes ten minutes from the moment you arrive.</p>
+        <div class="contact-row">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div>
+            <div class="label">Address</div>
+            <div class="value">Gachibowli, Hyderabad,<br>Telangana 500032</div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div>
+            <div class="label">Call</div>
+            <a href="tel:+91XXXXXXXXXX" class="value">+91 XXXXX XXXXX</a>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487 1.715.741 2.379.804 3.236.679.522-.077 1.605-.656 1.83-1.288.227-.633.227-1.175.16-1.288-.067-.115-.247-.182-.518-.297M12 22a9.962 9.962 0 0 1-5.001-1.339L2 22l1.339-4.999A9.962 9.962 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg></div>
+          <div>
+            <div class="label">WhatsApp</div>
+            <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener" class="value">+91 XXXXX XXXXX</a>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg></div>
+          <div>
+            <div class="label">Open in maps</div>
+            <a href="https://www.google.com/maps?q=17.44602270932871,78.36130024945885" target="_blank" rel="noopener" class="value">Get directions →</a>
+          </div>
+        </div>
+      </div>
+      <div class="map-frame">
+        <iframe
+          src="https://maps.google.com/maps?q=17.44602270932871,78.36130024945885&z=16&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Self Drive Cars Rental Hub — Gachibowli location map"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FAQ ═══════════════ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">FAQ</div>
+        <h2>Questions, answered.</h2>
+      </div>
+      <p>Still unclear about something? Call us — the answer takes longer to type than to say.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">What documents do I need?<span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">A valid Indian Driving Licence (at least one year old) and Aadhaar card. Both can be sent over WhatsApp before pickup to speed things up.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is there a deposit?<span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes — ₹3,000 refundable security deposit collected at pickup. Returned the same day you bring the car back.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can I take the car to another state?<span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Absolutely. Karnataka, Andhra, Tamil Nadu, Maharashtra — all fine. Just tell us at booking so we sort the inter-state permits. Goa &amp; the hills are popular routes.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What about fuel?<span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Cars are handed over with whatever fuel level you'd like — just return them at the same level. Or top up and we'll adjust at the deposit.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you offer doorstep delivery?<span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes — free within Gachibowli &amp; HITEC City. Outside that, ₹300 within Hyderabad city limits. Call to confirm coverage.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What if the car has a problem on the trip?<span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Call the number on the keychain — that's a 24×7 line. Roadside assistance is included on every rental. We'll arrange a replacement or recovery within hours.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CTA BANNER ═══════════════ -->
+<div class="cta-banner">
+  <div class="container">
+    <h2>Ready when you are.</h2>
+    <p>One call, one car, one weekend you'll actually remember.</p>
+    <div class="cta-banner-ctas">
+      <a href="tel:+91XXXXXXXXXX" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call +91 XXXXX XXXXX
+      </a>
+      <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener" class="btn btn-whatsapp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487 1.715.741 2.379.804 3.236.679.522-.077 1.605-.656 1.83-1.288.227-.633.227-1.175.16-1.288-.067-.115-.247-.182-.518-.297M12 22a9.962 9.962 0 0 1-5.001-1.339L2 22l1.339-4.999A9.962 9.962 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Book on WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ FOOTER — Contact info #4 (FOOTER) ═══════════════ -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="brand">
+        <div class="brand-mark">SD</div>
+        <div class="brand-text" style="color:var(--bg);">
+          Self Drive Cars
+          <small>Rental Hub · Gachibowli</small>
+        </div>
+      </a>
+      <p>The self-drive rental hub for Gachibowli &amp; HITEC City. Clean cars, honest rates, and a phone that actually gets picked up.</p>
+      <div class="contact-line">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <a href="tel:+91XXXXXXXXXX"><strong>+91 XXXXX XXXXX</strong></a>
+      </div>
+      <div class="contact-line">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div><strong>Gachibowli, Hyderabad</strong><br>Telangana 500032, India</div>
+      </div>
+    </div>
+    <div>
+      <h5>Explore</h5>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#fleet">Featured car</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#location">Find us</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Fleet</h5>
+      <ul>
+        <li><a href="#fleet">Hatchback — Baleno, Swift</a></li>
+        <li><a href="#fleet">Sedan — City, Verna</a></li>
+        <li><a href="#fleet">Compact SUV — Sonet</a></li>
+        <li><a href="#fleet">7-seater — Innova</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Get in touch</h5>
+      <ul>
+        <li><a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a></li>
+        <li><a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener">WhatsApp us</a></li>
+        <li><a href="https://www.google.com/maps?q=17.44602270932871,78.36130024945885" target="_blank" rel="noopener">Open in Google Maps</a></li>
+        <li>Open 24×7</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© <span id="year"></span> Self Drive Cars Rental Hub · Gachibowli, Hyderabad. All rights reserved.</div>
+    <div>Built for drivers, not passengers.</div>
+  </div>
+</footer>
+
+<!-- ═══════════════ FLOATING WHATSAPP ═══════════════ -->
+<a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener" class="float-wa" aria-label="Chat with us on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487 1.715.741 2.379.804 3.236.679.522-.077 1.605-.656 1.83-1.288.227-.633.227-1.175.16-1.288-.067-.115-.247-.182-.518-.297M12 22a9.962 9.962 0 0 1-5.001-1.339L2 22l1.339-4.999A9.962 9.962 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</a>
+
+<script>
+  // Year in footer
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.parentElement.classList.toggle('open');
+    });
+  });
+
+  // Reveal on scroll (using IntersectionObserver)
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('section .section-head, .step, .fleet-card, .why-item, .price-row, .faq-item').forEach(el => {
+    el.classList.add('reveal');
+    io.observe(el);
+  });
+</script>
+</body>
+</html>
